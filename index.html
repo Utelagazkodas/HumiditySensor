@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: #655967;">
 
 <head>
   <meta charset="UTF-8">
@@ -8,77 +8,23 @@
 </head>
 
 <body>
-  <div>
-    <canvas id="myChart"></canvas>
+  <div id="online">
+    <canvas id="myChart" width="80vw" height="25vh"></canvas>
   </div>
-  <button onclick="asd()" type="button">asd</button>
 
+  <div id="offline">
+    <div>
+      Current Relative Humiditiy: <span id="curHum">85</span>
+    </div>
+    <div>
+      Current Temperature: <span id="curTemp">24</span>
+    </div>
+  </div>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
-
-<script>
-
-
-  const ctx = document.getElementById('myChart');
-
-  let online = false;
-
-  try {
-    new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: [0, 1, 2, 3, 4, 5],
-        datasets: [{
-          label: 'Relative Humidity (%)',
-          data: [80, 81, 87, 79, 72, 65],
-          borderWidth: 2,
-          yAxisID: "H",
-
-        },
-        {
-          label: 'Temperature (C)',
-          data: [20, 21, 20, 19, 20, 20],
-          borderWidth: 2,
-          yAxisID: "T",
-
-
-        }
-        ]
-      },
-      options: {
-        scales: {
-          H: {
-            position: "left",
-            min: 50,
-            max: 100,
-          },
-          T: {
-            position: "right",
-            min: 15,
-            max: 30,
-
-          },
-          x: {
-           type: "time"
-
-          }
-        }
-      }
-
-    });
-
-    online = true
-  } catch (error) {
-    // pass
-  }
-  
-  
-  function asd(){
-    alert(online);
-  }
-
-</script>
+<script
+  src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script type="module" src="./main.ts"></script>
 
 </html>

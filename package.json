@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "chart.js": "^4.5.1",
+    "esbuild": "^0.27.2",
+    "html-minifier-terser": "^7.2.0"
+  },
+  "dependencies": {
+    "chartjs-adapter-date-fns": "^3.0.0"
+  }
+}

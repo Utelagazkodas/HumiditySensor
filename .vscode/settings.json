@@ -5,9 +5,13 @@
         "**/.hg": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
-        "**/.gitignore": true,
+        "**/.gitignore": false,
         "**/.pio": true,
-        "**/.vscode": true
+        "**/.vscode": true,
+        "node_modules": true,
+        "out.html": false,
+        "package.json": true,
+        "package-lock.json": true
     },
     "explorerExclude.backup": {}
 }
