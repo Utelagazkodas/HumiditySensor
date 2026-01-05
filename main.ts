@@ -1,3 +1,4 @@
+
 const ctx = document.getElementById("myChart") as HTMLCanvasElement;
 
 let online = false;
@@ -50,9 +51,9 @@ chartData.tempData = tempTemperatures.reverse()
 try {
     var mainChart = new Chart(ctx, {
         type: "line",
-
         data: {
             labels: chartData.labels,
+            
             datasets: [
                 {
                     label: "Relative Humidity (%)",
@@ -60,6 +61,9 @@ try {
                     borderWidth: 2,
                     yAxisID: "H",
                     borderColor: "#7891c5ff",
+                    
+                    
+                    
                 },
                 {
                     label: "Temperature (C)",
@@ -71,8 +75,16 @@ try {
             ],
         },
         options: {
+            plugins: {
+                legend:{
+                    labels:{
+                        color: "#cccccc"
+                    }
+                }
+            },
             scales: {
                 H: {
+
                     position: "left",
                     min: 50,
                     max: 100,
@@ -127,5 +139,15 @@ try {
 
     document.getElementById("online")?.remove();
 }
+
+const humSpan = document.getElementById("curHum")
+
+const tempSpan = document.getElementById("curTemp")
+
+humSpan!.innerText = `${chartData.humidityData[chartData.humidityData.length-1]}`
+tempSpan!.innerText = `${chartData.tempData[chartData.tempData.length -1 ]}`
+
+
+
 
 export {};
