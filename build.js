@@ -36,4 +36,6 @@ html = await minifyHtml(html, {
   keepClosingSlash: false
 });
 
+html = html.replace(/"/g, "'");
+
 fs.writeFileSync('./out.html', html);

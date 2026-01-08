@@ -27,8 +27,8 @@ while(data.quarterHourSamples.length != 0){
     }
     tempLabels.push(curTimeStep)
     curTimeStep-= 15*60*1000
-    tempHumiditys.push(value[0])
-    tempTemperatures.push(value[1])
+    tempHumiditys.push(value[0]/2)
+    tempTemperatures.push(value[1]/4)
 }
 
 while(data.hourSamples.length != 0){
@@ -38,8 +38,8 @@ while(data.hourSamples.length != 0){
     }
     tempLabels.push(curTimeStep)
     curTimeStep-= 60*60*1000
-    tempHumiditys.push(value[0])
-    tempTemperatures.push(value[1])
+    tempHumiditys.push(value[0]/2)
+    tempTemperatures.push(value[1]/4)
 }
 
 chartData.labels = tempLabels.reverse()
