@@ -1,17 +1,17 @@
 {
     "files.exclude": {
-        "**/.git": false,
-        "**/.svn": false,
-        "**/.hg": false,
-        "**/.DS_Store": false,
-        "**/Thumbs.db": false,
-        "**/.gitignore": false,
-        "**/.pio": false,
-        "**/.vscode": false,
-        "node_modules": false,
-        "out.html": false,
-        "package.json": false,
-        "package-lock.json": false
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/.gitignore": true,
+        "**/.pio": true,
+        "**/.vscode": true,
+        "node_modules": true,
+        "out.html": true,
+        "package.json": true,
+        "package-lock.json": true
     },
     "explorerExclude.backup": {}
 }
